@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            margin: 1px 0;
+            width:190px;
+            color: black;
+            background-color:gray;
+            padding: 3px;
+        }
+        table{
+            float: left;
+            width:40px;
+            background-color: gainsboro;
+            margin: 1px 1px;
+            visibility: hidden;
+        }
+        td{
+            text-align: center;
+            display: block;
+        }
+        td:hover{
+            color: white;
+            background-color: #2aabd2;
+        }
+    </style>
+</head>
+<body>
+<span id="wq" onmouseover="overwq()" onmouseout="outwq()" >武器</span>
+<span id="hj" onmouseover="overhj()" onmouseout="outhj()">护甲</span>
+<span id="yx" onmouseover="overyx()" onmouseout="outyx()">英雄</span><br/>
+<table onmouseover="overwq()" onmouseout="outwq()" id="lwq">
+    <tr><td>1</td></tr>
+    <tr><td>2</td></tr>
+    <tr><td>3</td></tr>
+    <tr><td>4</td></tr>
+</table>
+<table onmouseover="overhj()" onmouseout="outhj()" id="lhj">
+    <tr><td>11</td></tr>
+    <tr><td>12</td></tr>
+    <tr><td>13</td></tr>
+    <tr><td>14</td></tr>
+</table>
+<table onmouseover="overyx()" onmouseleave="outyx()" id="lyx">
+    <tr><td>21</td></tr>
+    <tr><td>22</td></tr>
+    <tr><td>23</td></tr>
+    <tr><td>24</td></tr>
+</table>
+<script>
+function overwq() {
+    var over=document.getElementById("lwq");
+    over.style.visibility="visible";
+}
+function outwq() {
+    var out=document.getElementById("lwq");
+    out.style.visibility="hidden";
+}
+function overhj() {
+    var over1=document.getElementById("lhj");
+    over1.style.visibility="visible";
+}
+function outhj() {
+    var out1=document.getElementById("lhj");
+    out1.style.visibility="hidden";
+}
+function overyx() {
+    var over2=document.getElementById("lyx");
+    over2.style.visibility="visible";
+}
+function outyx() {
+    var out2=document.getElementById("lyx");
+    out2.style.visibility="hidden";
+}
+</script>
+</body>
+</html>
